@@ -1,0 +1,6 @@
+#Excluded folders
+node_modules
+mongoDB
+
+#Excluded files
+consigne.txt
