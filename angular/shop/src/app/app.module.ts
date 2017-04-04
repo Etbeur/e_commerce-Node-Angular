@@ -1,18 +1,27 @@
+import { PageNotFoundComponent } from './page-not-found.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
+import { FormulaireInscriptionComponent } from './formulaire-inscription/formulaire-inscription.component';
+import { FormulaireConnexionComponent } from './formulaire-connexion/formulaire-connexion.component';
+import { routes } from './app.route';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormulaireInscriptionComponent,
+    FormulaireConnexionComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    ReactiveFormsModule,
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
