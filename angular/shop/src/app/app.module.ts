@@ -14,8 +14,7 @@ import { FilterComponent } from './categories/filter/filter.component';
 import { ProductsComponent } from './categories/products/products.component';
 import { PageNotFoundComponent } from './error/page-not-found.component';
 import { InscriptionComponent } from './inscription/inscription.component';
-import { ConnexionComponent } from './connexion/connexion.component';
-import { MaterialModule } from '@angular/material';
+import { ConnexionComponent } from './connexion/connexion.component'
 
 
 @NgModule({
@@ -37,8 +36,7 @@ import { MaterialModule } from '@angular/material';
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes),
-    MaterialModule.forRoot()
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

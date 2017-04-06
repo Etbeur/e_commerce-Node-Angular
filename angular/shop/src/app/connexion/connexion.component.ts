@@ -8,8 +8,11 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 })
 export class ConnexionComponent implements OnInit {
   connexionForm:FormGroup;
+  returnHome:string;
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder) { 
+    this.returnHome = "Home";
+  }
 
   ngOnInit() {
 

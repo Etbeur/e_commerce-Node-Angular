@@ -1,11 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-.header {
-    min-width: 100%;
-    background: #0575E6;
-    color: #FFF;
-    display: flex;
-    justify-content: space-around;
-    font-family: 'Montserrat', sans-serif;
-    align-items: center;
+.form-horizontal{
+    text-align: center;
 }

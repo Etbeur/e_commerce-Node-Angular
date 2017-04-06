@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.header {
+    min-width: 100%;
+    background: #0575E6;
+    color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+}
+
+a{
+    color: #FFF;
+}

@@ -9,8 +9,11 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 export class InscriptionComponent implements OnInit {
 
   inscriptionForm:FormGroup;
+  returnHome:string;
 
-  constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder) { 
+    this.returnHome = "Home";
+  }
 
   ngOnInit() {
 
