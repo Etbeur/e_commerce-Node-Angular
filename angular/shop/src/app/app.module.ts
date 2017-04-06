@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +15,8 @@ import { ProductsComponent } from './categories/products/products.component';
 import { PageNotFoundComponent } from './error/page-not-found.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { MaterialModule } from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import { ConnexionComponent } from './connexion/connexion.component';
     ProductsComponent,
     PageNotFoundComponent,
     InscriptionComponent,
-    ConnexionComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
+    MaterialModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

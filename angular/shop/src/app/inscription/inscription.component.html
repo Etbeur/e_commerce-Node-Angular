@@ -1,3 +1,57 @@
-<p>
-  inscription works!
-</p>
+<div class="header">
+  <h1>Inscription</h1>
+</div>
+
+<form (submit)="inscription()" [formGroup]="inscriptionForm">
+  <p>
+    <label for="">Name</label>
+    <input type="text" formControlName="name" />
+    <span [hidden]="inscriptionForm.get('name').valid">
+       You have to give a name with a maximum of 24 characters
+    </span>
+  </p>
+
+  <p>
+    <label for="">First Name</label>
+    <input type="text" formControlName="firstName" />
+    <span [hidden]="inscriptionForm.get('firstName').valid">
+      You have to give your frist name with a maximum of 24 characters
+    </span>
+  </p>
+
+  <p>
+    <label for="">Adress</label>
+    <input type="text" formControlName="adress" />
+    <span [hidden]="inscriptionForm.get('adress').valid">
+      You have to give your adress
+    </span>
+  </p>
+  
+  <p>
+    <label for="">Email</label>
+    <input type="email" formControlName="email" />
+    <span [hidden]="inscriptionForm.get('email').valid">
+      You don't give a correct email
+    </span>
+  </p>
+  
+  <p>
+    <label for="">Password</label>
+    <input type="password" formControlName="password" /> 
+    <span [hidden]="inscriptionForm.get('password').valid">
+       You have to give a password with a minimum of 8 characters
+    </span>
+  </p>
+ 
+  <p>
+    <label for="">Password confirmation</label>
+    <input type="password" formControlName="passwordConfirmation" />
+    <span [hidden]="!inscriptionForm.getError('notSamePassword')">
+       The two passwords are differents
+    </span>
+  </p>
+  
+  <p>
+    <button type="submit" [disabled]="!inscriptionForm.valid">Validate</button>
+  </p>
+</form>

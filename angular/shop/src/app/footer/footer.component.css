@@ -1,0 +1,9 @@
+p {
+    text-align: center;
+}
+a {
+    color: #DC143C;
+}
+a:hover {
+    color: #32CD32;
+}
